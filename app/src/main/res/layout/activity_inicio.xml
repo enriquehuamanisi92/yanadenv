@@ -87,7 +87,7 @@
               android:layout_height="wrap_content"
               android:layout_margin="15dp"
               android:gravity="left"
-              android:hint="  BIENVENIDO A QHAWAWA"
+              android:hint="  BIENVENIDO A YANADENV"
               android:textSize="18dp"
               android:translationZ="8dp"
               android:textStyle="bold"
