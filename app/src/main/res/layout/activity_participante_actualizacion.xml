@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".principal.ParticipanteActualizacion"
+    android:orientation="vertical">
+
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@drawable/background"
+        android:layout_height="?attr/actionBarSize" >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/qhawawa"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/datoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="left"
+            android:hint="DATOS DEL PARTICIPANTE:"
+            android:textSize="18dp"
+            android:translationZ="8dp"
+            android:textStyle="bold"
+            android:textColorHint="@color/colorQhawawa1">
+        </com.google.android.material.textview.MaterialTextView>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="18dp"
+            android:textColorHint="@color/colorQhawawa1"
+            android:textStyle="bold"
+
+            android:hint="APELLIDOS"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColorHint="@color/colorQhawawa1"
+            android:hint="NOMBRES"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtEditApellido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="18dp"
+            android:textStyle="bold"
+
+            android:hint=""
+            />
+
+        <EditText
+            android:id="@+id/txtEditNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="18dp"
+            android:textStyle="bold"
+
+            android:hint=""
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:hint="DETALLES DE AUDIOS CLINICOS:"
+            android:textColorHint="@color/colorQhawawa1"
+            android:textSize="18dp"
+            android:textStyle="bold">
+        </com.google.android.material.textview.MaterialTextView>
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:autoSizeTextType="uniform"-->
+<!--            android:textSize="18dp"-->
+<!--            android:textStyle="bold"-->
+
+<!--            android:hint="CAMPAÑA"-->
+<!--            />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+<!--        <EditText-->
+<!--            android:id="@+id/txtEditCampania"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_weight="1"-->
+<!--            android:autoSizeTextType="uniform"-->
+<!--            android:textSize="18dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:hint=""-->
+<!--            />-->
+<!--    </LinearLayout>-->
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+
+    <TextView
+        android:id="@+id/receive_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:freezesText="true"
+        android:gravity="bottom"
+        android:scrollbars="vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="?android:attr/listDivider"
+        android:layout_height="2dp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="EDITAR"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/cardview_light_background"
+            android:background="@android:color/black"/>
+
+        <Button
+            android:id="@+id/btnIngresarAudios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="REGISTRAR TEXTO"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/cardview_light_background"
+            android:background="@android:color/black"/>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnListaAudios"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ESCUCHAR AUDIOS"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/cardview_light_background"
+            android:background="@android:color/holo_red_dark"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnResultadosAudios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="VER RESULTADO CLINICOS"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="@color/cardview_light_background"
+            android:background="@android:color/black"/>
+    </LinearLayout>
+
+</LinearLayout>

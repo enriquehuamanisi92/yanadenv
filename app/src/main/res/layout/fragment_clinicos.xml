@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".registro.fragmentos.ClinicosFragment"
+    android:orientation="vertical"
+    app:layout_scrollFlags="scroll|enterAlways"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    style="@style/Theme.MaterialComponents.DayNight">
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:id="@+id/llBotonera"
+            >
+            <!-- Content here -->
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

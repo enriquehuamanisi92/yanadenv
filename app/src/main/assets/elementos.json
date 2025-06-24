@@ -1,0 +1,45 @@
+{
+  "elementos": [
+    {
+      "Tipo_Elemento": "Texto",
+      "Titulo": "Elemento cadena",
+      "Lista_elemento": null,
+      "Tipo_Datos" : "Cadena"
+    },
+    {
+      "Tipo_Elemento": "Texto",
+      "Titulo": "Elemento entero",
+      "Lista_elemento":null,
+      "Tipo_Datos" : "Entero"
+    },
+    {
+      "Tipo_Elemento": "Texto",
+      "Titulo": "Elemento decimal",
+      "Lista_elemento":null,
+      "Tipo_Datos" : "Decimal"
+    },
+    {
+      "Tipo_Elemento": "Simple",
+      "Titulo": "Seleccione pais",
+      "Lista_elemento": ["Peru","Colombia","Brasil","Japon"],
+      "Tipo_Datos" : null
+      },
+
+    {
+      "Tipo_Elemento": "Multiple",
+      "Titulo": "Seleccione Animales",
+      "Lista_elemento": ["Perro","gato","gallina","conejo"],
+      "Tipo_Datos" : null
+    },
+    {
+      "Tipo_Elemento": "Multiple",
+      "Titulo": "Seleccione verduras",
+      "Lista_elemento": ["Zanahoria","Papa","Zapayo","Huandoy","Tomate","Tuna"],
+      "Tipo_Datos" : null
+    }
+  ]
+}
+
+
+
+

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ListaAudiosClinicos"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="#911414"
+        android:layout_height="?attr/actionBarSize" >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/covid19"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/datoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="left"
+            android:hint="DATOS DEL PARTICIPANTE:"
+            android:textSize="18dp"
+            android:translationZ="8dp"
+            android:textStyle="bold"
+            android:textColorHint="@color/design_default_color_on_primary">
+        </com.google.android.material.textview.MaterialTextView>
+    </androidx.appcompat.widget.Toolbar>
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:autoSizeTextType="uniform"-->
+<!--            android:textSize="18dp"-->
+<!--            android:textStyle="bold"-->
+
+<!--            android:hint="APELLIDOS"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:autoSizeTextType="uniform"-->
+<!--            android:textSize="18dp"-->
+<!--            android:textStyle="bold"-->
+
+<!--            android:hint="NOMBRES"-->
+<!--            />-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/txtEditApellido"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_weight="1"-->
+<!--            android:autoSizeTextType="uniform"-->
+<!--            android:textSize="18dp"-->
+<!--            android:textStyle="bold"-->
+
+<!--            android:hint=""-->
+<!--            />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/txtEditNombre"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_weight="1"-->
+<!--            android:autoSizeTextType="uniform"-->
+<!--            android:textSize="18dp"-->
+<!--            android:textStyle="bold"-->
+
+<!--            android:hint=""-->
+<!--            />-->
+<!--    </LinearLayout>-->
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:hint="AUDIOS REGISTRADO EN LA APLICACION"
+        android:textSize="25dp"
+        android:translationZ="8dp"
+        android:textStyle="bold">
+    </com.google.android.material.textview.MaterialTextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llBotonera" >
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+
