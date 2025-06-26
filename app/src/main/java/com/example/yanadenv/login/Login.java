@@ -93,7 +93,7 @@ public class Login extends AppCompatActivity {
                         Toast.makeText(Login.this, "Credenciales incorrectas", Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Token token = new Token(usuario, contrasenia, "Qhawawa");
+                    Token token = new Token(usuario, contrasenia, "Yanadenv");
                     urlToken(token);
                 }
             }
@@ -161,7 +161,7 @@ public class Login extends AppCompatActivity {
                                                 public void onResponse(Call<Project> call, Response<Project> response) {
                                                     if (response.isSuccessful()) {
                                                         if (response.body().getName().equals("Datos Clínicos") &&
-                                                                response.body().getProjectId().equals("9ac69152-355b-47a9-a5b7-0f6e104c0adc")) {
+                                                                response.body().getProjectId().equals("82c7193e-5208-11f0-95cd-e297c4e3c44f")) {
                                                             Gson gson = new Gson();
                                                             Object request = gson.toJson(response.body());
 
@@ -173,7 +173,7 @@ public class Login extends AppCompatActivity {
                                                         }
 
                                                         if (response.body().getName().equals("Conocimiento") &&
-                                                                response.body().getProjectId().equals("9ac69152-355b-47a9-a5b7-0f6e104c0adc")) {
+                                                                response.body().getProjectId().equals("82c7193e-5208-11f0-95cd-e297c4e3c44f")) {
                                                             Gson gson = new Gson();
                                                             Object request = gson.toJson(response.body());
 
@@ -185,7 +185,7 @@ public class Login extends AppCompatActivity {
                                                         }
 
                                                         if (response.body().getName().equals("Socieconómico") &&
-                                                                response.body().getProjectId().equals("9ac69152-355b-47a9-a5b7-0f6e104c0adc")) {
+                                                                response.body().getProjectId().equals("82c7193e-5208-11f0-95cd-e297c4e3c44f")) {
 
                                                             Gson gson = new Gson();
                                                             Object request = gson.toJson(response.body());
