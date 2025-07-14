@@ -778,90 +778,159 @@ public class ParticipanteFragmen extends Fragment {
             estado = false;
         }
 
-
-        String estadocivil = txtEstadoCivil.getText().toString();
-        if (estadocivil.equals("")) {
-            Toast.makeText(getActivity(), "Seleccionar estado civil !!!", Toast.LENGTH_SHORT).show();
+      // COMENTADO HOY 14 07 2025 PARA PERMITIR VALIDACION NO EXPLICITA
+      //  String estadocivil = txtEstadoCivil.getText().toString();
+      //  if (estadocivil.equals("")) {
+        //    Toast.makeText(getActivity(), "Seleccionar estado civil !!!", Toast.LENGTH_SHORT).show();
             // Focus en jugar y abrir el Teclado
             //  txtEstadoCivil.requestFocus();
-            estado = false;
+      //      estado = false;
+      //  }
+
+
+        String estadocivil = txtEstadoCivil.getText() != null ? txtEstadoCivil.getText().toString() : "";
+        if (estadocivil.equals("")) {
+            estadocivil = "N/A"; // Valor por defecto si está vacío
+            // No mostramos Toast ni bloqueamos el avance
+            // Si quieres puedes guardar este valor en la base de datos o donde corresponda
         }
 
 
-        String peso = txtPeso.getText().toString();
-        if (peso.equals("")) {
-            Toast.makeText(getActivity(), "Ingresar peso !!!", Toast.LENGTH_SHORT).show();
+      //  String peso = txtPeso.getText().toString();
+      //  if (peso.equals("")) {
+       //     Toast.makeText(getActivity(), "Ingresar peso !!!", Toast.LENGTH_SHORT).show();
             // Focus en jugar y abrir el Teclado
-            txtPeso.requestFocus();
-            estado = false;
+        //    txtPeso.requestFocus();
+        //    estado = false;
+      //  }
+
+        String peso = txtPeso.getText() != null ? txtPeso.getText().toString() : "";
+        if (peso.equals("")) {
+            peso = "0"; // o usa "N/A" según el formato que espera tu sistema
+            // No mostramos Toast ni bloqueamos el avance
+            // Puedes guardar este valor en la base de datos o donde corresponda
         }
+// Puedes seguir usando la variable peso sin preocuparte por nulos o vacíos
 
 
-        String talla = txtTalla.getText().toString();
-        if (talla.equals("")) {
-            Toast.makeText(getActivity(), "Ingresar talla !!!", Toast.LENGTH_SHORT).show();
+      //  String talla = txtTalla.getText().toString();
+     //   if (talla.equals("")) {
+         //   Toast.makeText(getActivity(), "Ingresar talla !!!", Toast.LENGTH_SHORT).show();
             // Focus en jugar y abrir el Teclado
             txtTalla.requestFocus();
-            estado = false;
-        }
+         //   estado = false;
+        //}
 
-        String edad = txtEdad.getText().toString();
-        if (edad.equals("")) {
-            Toast.makeText(getActivity(), "Ingresar Edad !!!", Toast.LENGTH_SHORT).show();
+        String talla = txtTalla.getText() != null ? txtTalla.getText().toString() : "";
+        if (talla.equals("")) {
+            talla = "0"; // o "N/A", según lo que necesite tu sistema
+            // No mostramos Toast ni bloqueamos el avance
+            // Puedes guardar este valor en la base de datos o donde corresponda
+        }
+// Puedes seguir usando la variable talla sin preocuparte por vacíos
+
+
+
+      //  String edad = txtEdad.getText().toString();
+      //  if (edad.equals("")) {
+        //    Toast.makeText(getActivity(), "Ingresar Edad !!!", Toast.LENGTH_SHORT).show();
             // Focus en jugar y abrir el Teclado
-            txtEdad.requestFocus();
-            estado = false;
+        //    txtEdad.requestFocus();
+       //     estado = false;
+      //  }
+      //  int edadEntera = 0;
+      //  if (!txtEdad.getText().toString().isEmpty()){
+
+       //     edadEntera = Integer.parseInt(txtEdad.getText().toString());
+     //   }
+
+
+        String edad = txtEdad.getText() != null ? txtEdad.getText().toString() : "";
+        if (edad.equals("")) {
+            edad = "0"; // Valor por defecto si está vacío
+            // No mostramos Toast ni bloqueamos el avance
+            // No hacemos focus
         }
         int edadEntera = 0;
-        if (!txtEdad.getText().toString().isEmpty()){
-
-            edadEntera = Integer.parseInt(txtEdad.getText().toString());
+        try {
+            edadEntera = Integer.parseInt(edad);
+        } catch (NumberFormatException e) {
+            edadEntera = 0; // Si ocurre algún error, valor por defecto
         }
+// Ahora puedes usar edadEntera sin preocuparte por errores
 
 
 
+//        if (edadEntera <= 18) {
+//
+//            String nombreApoderado = txtNombreApoderado.getText().toString();
+//            if (nombreApoderado.equals("")) {
+//                Toast.makeText(getActivity(), "Ingresar nombre apoderado !!!", Toast.LENGTH_SHORT).show();
+//                // Focus en jugar y abrir el Teclado
+//                txtNombreApoderado.requestFocus();
+//                estado = false;
+//            }
+//
+//            String ApellidoApoderado = txtApellidoApoderado.getText().toString();
+//            if (ApellidoApoderado.equals("")) {
+//                Toast.makeText(getActivity(), "Ingresar apellido apoderado !!!", Toast.LENGTH_SHORT).show();
+//                // Focus en jugar y abrir el Teclado
+//                txtApellidoApoderado.requestFocus();
+//                estado = false;
+//            }
+//
+//            String sexoApoderado = txtSexoApoderado.getText().toString();
+//            if (sexoApoderado.equals("")) {
+//                Toast.makeText(getActivity(), "Ingresar sexo apoderado !!!", Toast.LENGTH_SHORT).show();
+//                // Focus en jugar y abrir el Teclado
+//                //    txtSexoApoderado.requestFocus();
+//                estado = false;
+//            }
+//
+//            String docummentoApoderado = txtTipoDocumentoApoderado.getText().toString();
+//            if (docummentoApoderado.equals("")) {
+//                Toast.makeText(getActivity(), "Ingresar tipo de documento de apoderado !!!", Toast.LENGTH_SHORT).show();
+//                // Focus en jugar y abrir el Teclado
+//                //   txtTipoDocumentoApoderado.requestFocus();
+//                estado = false;
+//            }
+//
+//            String dniApoderado = txtDniApoderado.getText().toString();
+//            if (dniApoderado.equals("")) {
+//                Toast.makeText(getActivity(), "Ingresar numero de documento apoderado !!!", Toast.LENGTH_SHORT).show();
+//                // Focus en jugar y abrir el Teclado
+//                txtDniApoderado.requestFocus();
+//                estado = false;
+//            }
+//        }
 
         if (edadEntera <= 18) {
-
-            String nombreApoderado = txtNombreApoderado.getText().toString();
+            String nombreApoderado = txtNombreApoderado.getText() != null ? txtNombreApoderado.getText().toString() : "";
             if (nombreApoderado.equals("")) {
-                Toast.makeText(getActivity(), "Ingresar nombre apoderado !!!", Toast.LENGTH_SHORT).show();
-                // Focus en jugar y abrir el Teclado
-                txtNombreApoderado.requestFocus();
-                estado = false;
+                nombreApoderado = "N/A"; // Valor por defecto
             }
 
-            String ApellidoApoderado = txtApellidoApoderado.getText().toString();
+            String ApellidoApoderado = txtApellidoApoderado.getText() != null ? txtApellidoApoderado.getText().toString() : "";
             if (ApellidoApoderado.equals("")) {
-                Toast.makeText(getActivity(), "Ingresar apellido apoderado !!!", Toast.LENGTH_SHORT).show();
-                // Focus en jugar y abrir el Teclado
-                txtApellidoApoderado.requestFocus();
-                estado = false;
+                ApellidoApoderado = "N/A";
             }
 
-            String sexoApoderado = txtSexoApoderado.getText().toString();
+            String sexoApoderado = txtSexoApoderado.getText() != null ? txtSexoApoderado.getText().toString() : "";
             if (sexoApoderado.equals("")) {
-                Toast.makeText(getActivity(), "Ingresar sexo apoderado !!!", Toast.LENGTH_SHORT).show();
-                // Focus en jugar y abrir el Teclado
-                //    txtSexoApoderado.requestFocus();
-                estado = false;
+                sexoApoderado = "N/A";
             }
 
-            String docummentoApoderado = txtTipoDocumentoApoderado.getText().toString();
+            String docummentoApoderado = txtTipoDocumentoApoderado.getText() != null ? txtTipoDocumentoApoderado.getText().toString() : "";
             if (docummentoApoderado.equals("")) {
-                Toast.makeText(getActivity(), "Ingresar tipo de documento de apoderado !!!", Toast.LENGTH_SHORT).show();
-                // Focus en jugar y abrir el Teclado
-                //   txtTipoDocumentoApoderado.requestFocus();
-                estado = false;
+                docummentoApoderado = "N/A";
             }
 
-            String dniApoderado = txtDniApoderado.getText().toString();
+            String dniApoderado = txtDniApoderado.getText() != null ? txtDniApoderado.getText().toString() : "";
             if (dniApoderado.equals("")) {
-                Toast.makeText(getActivity(), "Ingresar numero de documento apoderado !!!", Toast.LENGTH_SHORT).show();
-                // Focus en jugar y abrir el Teclado
-                txtDniApoderado.requestFocus();
-                estado = false;
+                dniApoderado = "N/A";
             }
+            // Ahora puedes usar estas variables con seguridad para guardar los datos,
+            // sin preocuparte por bloqueos ni errores por datos faltantes
         }
 
         return estado;
