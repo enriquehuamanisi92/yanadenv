@@ -99,7 +99,6 @@ public interface APIService {
    @Headers({ "Content-Type: application/json;charset=UTF-8"})
    Call<Campain2> getCampaiFull(@Header("Authorization") String token,@Query("draw") int draw, @Query("start") int start,
                                 @Query("length") int length);
-
     @GET("socieconomic/participant/{id}")
     Call<Socioeconomico> getSocioeconomico(@Path("id")  String id);
 

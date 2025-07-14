@@ -162,6 +162,8 @@ public class Login extends AppCompatActivity {
                                                     if (response.isSuccessful()) {
                                                         if (response.body().getName().equals("Datos Clínicos") &&
                                                                 response.body().getProjectId().equals("82c7193e-5208-11f0-95cd-e297c4e3c44f")) {
+                                                            //fcf82147-31d3-4023-9456-fa2b7cefe8ad
+                                                            // response.body().getProjectId().equals("82c7193e-5208-11f0-95cd-e297c4e3c44f")) {
                                                             Gson gson = new Gson();
                                                             Object request = gson.toJson(response.body());
 
@@ -202,7 +204,10 @@ public class Login extends AppCompatActivity {
                                                     }
                                                     if (iteracion == 2) {
 
-                                                        Call<ReadgroupFull> call0 = mAPIService.readGroupIdFull("Bearer " + token, 0, 0, 0, "9ac69152-355b-47a9-a5b7-0f6e104c0adc");
+                                                        Call<ReadgroupFull> call0 = mAPIService.readGroupIdFull("Bearer " + token, 0, 0, 0, "82c7193e-5208-11f0-95cd-e297c4e3c44f");
+                                                       // Call<Readgroup2> call0 = mAPIService.readGroupFull("Bearer " + token, response4.body().getData().get(0).getId());
+
+
                                                         call0.enqueue(new Callback<ReadgroupFull>() {
                                                             @Override
                                                             public void onResponse(Call<ReadgroupFull> call, Response<ReadgroupFull> response4) {
@@ -239,7 +244,9 @@ public class Login extends AppCompatActivity {
                                                             }
                                                         });
 
-                                                        Call<Campain2> call1 = mAPIService.getCampaiFull("Bearer " + token, 0, 0, 0);
+                                                        Call<Campain2> call1 = mAPIService.getCampaiFull("Bearer " + token, 0, 0, 0 );
+                                                      //  Call<ReadgroupFull> call0 = mAPIService.readGroupIdFull("Bearer " + token, 0, 0, 0, "9ac69152-355b-47a9-a5b7-0f6e104c0adc");
+
                                                         call1.enqueue(new Callback<Campain2>() {
                                                             @Override
                                                             public void onResponse(Call<Campain2> call, Response<Campain2> response) {

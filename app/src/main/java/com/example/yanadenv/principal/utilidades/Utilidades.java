@@ -14,7 +14,7 @@ public class Utilidades {
 
     public static final String TABLA_DATO = "datos";
 
-    public static final String NOMBRE_PROYECTO = "qhawawa";
+    public static final String NOMBRE_PROYECTO = "yanadenv";
 
     //////Campos Participante
     public static final String  CAMPO_ID = "id";
